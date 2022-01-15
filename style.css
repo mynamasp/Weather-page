@@ -6,21 +6,24 @@ body {
     margin:0;
     background: rgb(189,98,180);
     background: linear-gradient(180deg, rgba(189,98,180,1) 0%, rgba(117,61,147,1) 50%, rgba(0,0,92,1) 100%);
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+
+
 }
+
+body{height:100vh;}
 
 header{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
     width: 100%;
-    height: 90px;
-    margin:0;
-    padding:0;
-    left: 0px;
-    top: 0px;
+    height: 10%;
     background: #000247;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    align-items: center; 
+    justify-content: center;
 }
 
 header > div{
@@ -34,7 +37,7 @@ header > div{
     font-family: Roboto;
     font-style: normal;
     font-weight: 300;
-    font-size: 36px;
+    font-size: 2.5vw;
     line-height: 42px;
     color: #FFFFFF;
     /* padding: 24px; */
@@ -47,14 +50,16 @@ header > div{
     font-family: Roboto;
     font-style: normal;
     font-weight: 300;
-    font-size: 36px;
+    font-size: 2.5vw;
     line-height: 42px;
     color: #FFFFFF;
-    padding: 24px;
     text-align: center;
-    margin: auto;
+    /* margin: auto; */
 }
+.date-name {
+  font-weight: 400;
 
+}
 
 .search-box{
   margin: auto;
@@ -93,4 +98,177 @@ header > div{
 
   .search-input:focus {
       outline: 0;
+  }
+
+  main{
+
+    width: 60%;
+    height: 80vh;
+    margin: auto;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .city{
+    background-image: url(Images/Chennai-vector.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    height: 60%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    display: flex;
+    
+  }
+
+  .city-info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: -10%;
+  }
+
+  .city-temp{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 5vw;
+    line-height: 112px;
+    margin-top: 10vh;
+    color: #FFFFFF;
+  }
+
+  .city-weather{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 2.2vw;
+    line-height: 47px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 1vh;
+
+  }
+
+  .city-details{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 1vw;
+    line-height: 23px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    display: flex;
+    text-align: center;
+    margin-top: 5vh;
+    }
+
+  .city-humidity{
+    width: calc(100% / 2);
+
+  }
+
+  .city-humidity > div {
+    margin-left: 8vw;
+
+  }
+
+  #humidity{
+    margin-top: 1vh;
+  }
+
+  .city-wind-speed{
+    border-left: 1px solid; 
+    width: calc(100% / 2);
+
+  }
+
+  .city-wind-speed > div{
+    margin-right: 8vw;
+  }
+
+  #wind-speed{
+    margin-top: 1vh;
+  }
+
+  .city-name{
+    width: 60%;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    margin-top: 5%;
+    font-weight: 400;
+    font-size: 2.5vw;
+    line-height: 47px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    margin-right: -10%;
+  }
+.city-underline {
+    background-color:  white;
+    border-radius: 15px;
+    margin-top: 1vh;
+    width: 100px;
+    height: 5px;
+    align-self: center;
+}
+
+  .forecast{
+    display: flex;
+    flex: 1;
+    color: #575756;
+  }
+
+  .forecast > div {
+    width: calc(100% / 5);
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5vw;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+  }
+
+  .weather-icon {
+    width: 60%;
+    height: auto;
+  }
+
+  .day{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .day > * {
+    height: calc(100% / 3);
+    align-self: center;
+
+  }
+
+  .day-name > div {
+      margin-top: 5vh;
+  } 
+
+  .day-temp {
+    margin-top: 2vh;
+  }
+
+  /* .day > div {
+    margin-top: 1vh;
+  } */
+
+  @media (max-width: 800px) {
+    header {
+      flex-direction: column;
+    }
   }
