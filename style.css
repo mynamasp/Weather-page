@@ -130,7 +130,21 @@ header > div{
     flex-direction: column;
     text-align: center;
     margin-left: -10%;
+    -webkit-animation: fadein 1s linear forwards;
+    animation: fadein 1s linear forwards;
+    opacity:0;
+    animation-delay: 3s;
+
   }
+
+  @keyframes fadein{from{opacity:0}
+  to{opacity:1}
+  }
+  
+  @-webkit-keyframes fadein{from{opacity:0}
+  to{opacity:1}
+  }
+
 
   .city-temp{
     font-family: Roboto;
@@ -262,10 +276,6 @@ header > div{
   .day-temp {
     margin-top: 2vh;
   }
-
-  /* .day > div {
-    margin-top: 1vh;
-  } */
 
   @media (max-width: 800px) {
     header {
